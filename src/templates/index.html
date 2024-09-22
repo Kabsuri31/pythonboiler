@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="padding: 20px">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <h2>Todo List</h2>
+        <form action="/new" method="POST">
+          <input class="form-control" type="text" name="name" placeholder="Todo Name"><br>
+          <input class="form-control" type="text" name="description" placeholder="Todo Description"><br>
+          <input class="btn btn-primary" type="submit" value="Save Todo">
+        </form>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4">
+        <div class="panel panel-danger">
+          <div class="panel-body">
+            {% if items %}
+              {% for item in items %}
+              <h3>{{ item[1] }}</h3> <!-- Display name -->
+                <p>{{ item[2] }}</p>    <!-- Display description -->
+              {% endfor %}
+            {% else %}
+              <p>No todos yet!</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+

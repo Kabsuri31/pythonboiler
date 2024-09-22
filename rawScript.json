@@ -1,0 +1,5 @@
+{
+  "name": "raw",
+  "type": "groovy",
+  "content": "repository.createRawHosted('pipeline-artifacts')"
+}

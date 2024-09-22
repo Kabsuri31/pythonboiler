@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: $K8S_DEPLOYMENT_NAME-service
+  labels:
+    resourcetype: cartridge
+    name: $K8S_DEPLOYMENT_NAME-service
+    env: dev
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    name: $K8S_DEPLOYMENT_NAME
+    role: $TARGET_ROLE
