@@ -80,5 +80,4 @@ N/A
 This automation framework can be accessed via DevXOps Platform that is provisioned through the Developer Marketplace. Once the automation framework is provisioned, the URL and the required credentials are provided via email.
 
 ## Contributors ##
-suraksha.raju
-akhila.r.ashwath
+
